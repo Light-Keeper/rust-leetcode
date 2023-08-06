@@ -25,7 +25,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_task_0001() {
+    fn test() {
         let result = Solution::two_sum(vec![2,7,11,15], 9);
         assert_eq!(result, vec![0, 1])
     }
