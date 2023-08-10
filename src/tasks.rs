@@ -6,5 +6,7 @@ mod t0098_validate_binary_search_tree;
 mod t0092_reverse_linked_list_ii;
 mod t0085_maximal_rectangle;
 mod t0074_search_matrix;
+mod t2526_consecutive_integers;
+mod t0096_num_trees;
 
 struct Solution;
