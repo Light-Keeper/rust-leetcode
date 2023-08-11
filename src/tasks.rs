@@ -8,5 +8,6 @@ mod t0085_maximal_rectangle;
 mod t0074_search_matrix;
 mod t2526_consecutive_integers;
 mod t0096_num_trees;
+mod t0095_generate_trees;
 
 struct Solution;
