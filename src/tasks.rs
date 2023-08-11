@@ -9,5 +9,6 @@ mod t0074_search_matrix;
 mod t2526_consecutive_integers;
 mod t0096_num_trees;
 mod t0095_generate_trees;
+mod t0518_coin_change_2;
 
 struct Solution;
