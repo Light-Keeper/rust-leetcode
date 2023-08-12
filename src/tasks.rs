@@ -13,5 +13,6 @@ mod t0518_coin_change_2;
 mod t0196_lru_cache;
 mod t0149_max_points_on_line;
 mod t0150_evaluate_rpn;
+mod t0065_unique_path;
 
 struct Solution;
