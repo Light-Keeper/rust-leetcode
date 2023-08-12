@@ -10,5 +10,6 @@ mod t2526_consecutive_integers;
 mod t0096_num_trees;
 mod t0095_generate_trees;
 mod t0518_coin_change_2;
+mod t0196_lru_cache;
 
 struct Solution;
