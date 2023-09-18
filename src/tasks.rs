@@ -16,5 +16,6 @@ mod t0518_coin_change_2;
 mod t1337_k_weakest_rows;
 mod t1631_minimum_effort_path;
 mod t2526_consecutive_integers;
+mod t1584_min_cost_connect_points;
 
 struct Solution;

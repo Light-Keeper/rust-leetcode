@@ -2,7 +2,19 @@
 
 impl Solution {
     pub fn k_weakest_rows(mat: Vec<Vec<i32>>, k: i32) -> Vec<i32> {
-        unimplemented!()
+        let mut scores : Vec<_> = mat
+            .into_iter()
+            .enumerate()
+            .map(|(index, row)| { (row.into_iter().reduce(|a, b| a + b).unwrap(), index) })
+            .collect();
+
+        scores.sort_unstable();
+
+        scores
+            .into_iter()
+            .take(k as usize)
+            .map(|(_, index)| index as i32)
+            .collect()
     }
 }
 
