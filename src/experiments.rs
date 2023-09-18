@@ -1,2 +1,2 @@
-mod memoize;
 mod inherit;
+mod memoize;

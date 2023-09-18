@@ -11,7 +11,7 @@ impl Solution {
             if raw[i] != b'0' {
                 c += b
             }
-            if raw[i-1] == b'1' || (raw[i-1] == b'2' && raw[i] <= b'6') {
+            if raw[i - 1] == b'1' || (raw[i - 1] == b'2' && raw[i] <= b'6') {
                 c += a
             }
             a = b;
@@ -19,7 +19,7 @@ impl Solution {
             c = 0;
         }
 
-        return b
+        return b;
     }
 }
 

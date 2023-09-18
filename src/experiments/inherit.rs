@@ -1,9 +1,8 @@
-
 trait Person {
     fn name(&self) -> String;
 }
 
-trait Student : Person {
+trait Student: Person {
     fn university(&self) -> String;
 }
 
@@ -11,11 +10,9 @@ trait Programmer {
     fn fav_language(&self) -> String;
 }
 
-trait ComSciStudent : Student + Programmer {
-}
+trait ComSciStudent: Student + Programmer {}
 
-struct StudentIml {
-}
+struct StudentIml {}
 
 impl Student for StudentIml {
     fn university(&self) -> String {
@@ -35,10 +32,9 @@ impl Programmer for StudentIml {
     }
 }
 
-impl ComSciStudent for StudentIml {
-}
+impl ComSciStudent for StudentIml {}
 
-fn programmer_report(p : &dyn Programmer) -> String {
+fn programmer_report(p: &dyn Programmer) -> String {
     return p.fav_language();
 }
 

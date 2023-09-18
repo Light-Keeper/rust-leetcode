@@ -1,11 +1,11 @@
-use std::rc::Rc;
 use std::cell::RefCell;
 use std::mem;
+use std::rc::Rc;
 
 impl Solution {
     pub fn generate_trees(n: i32) -> Vec<Option<Rc<RefCell<TreeNode>>>> {
         assert!(1 <= n && n <= 8);
-        let mut buffer : [[_; 9]; 9] = Default::default();
+        let mut buffer: [[_; 9]; 9] = Default::default();
 
         for j in 0..=n as usize {
             buffer[0][j] = vec![None];
@@ -13,11 +13,11 @@ impl Solution {
                 let mut current = vec![];
                 for t in 0..i {
                     for l in buffer[t][j - i + t].iter() {
-                        for r in buffer[i-t-1][j].iter() {
+                        for r in buffer[i - t - 1][j].iter() {
                             current.push(Some(Rc::new(RefCell::new(TreeNode {
                                 val: (j - i + t) as i32 + 1,
                                 left: l.clone(),
-                                right: r.clone()
+                                right: r.clone(),
                             }))))
                         }
                     }
@@ -30,12 +30,11 @@ impl Solution {
     }
 }
 
-
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
-  pub val: i32,
-  pub left: Option<Rc<RefCell<TreeNode>>>,
-  pub right: Option<Rc<RefCell<TreeNode>>>,
+    pub val: i32,
+    pub left: Option<Rc<RefCell<TreeNode>>>,
+    pub right: Option<Rc<RefCell<TreeNode>>>,
 }
 
 use super::*;

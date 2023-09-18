@@ -1,12 +1,12 @@
 struct DataStream {
     len: i32,
     value: i32,
-    k: i32
+    k: i32,
 }
 
 impl DataStream {
     fn new(value: i32, k: i32) -> Self {
-        DataStream{len: 0, value, k}
+        DataStream { len: 0, value, k }
     }
 
     fn consec(&mut self, num: i32) -> bool {
@@ -38,15 +38,6 @@ mod tests {
             stream.consec(4),
         ];
 
-        assert_eq!(a, &[
-            false,
-            false,
-            true,
-            false,
-            false,
-            false,
-            true,
-            true
-        ])
+        assert_eq!(a, &[false, false, true, false, false, false, true, true])
     }
 }

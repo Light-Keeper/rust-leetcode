@@ -1,5 +1,4 @@
-
-fn memo<A : Copy + PartialEq, B : Copy>(mut f : impl FnMut(A) -> B) -> impl FnMut(A) -> B {
+fn memo<A: Copy + PartialEq, B: Copy>(mut f: impl FnMut(A) -> B) -> impl FnMut(A) -> B {
     let mut arg: Option<A> = None;
     let mut res: Option<B> = None;
 
@@ -10,7 +9,7 @@ fn memo<A : Copy + PartialEq, B : Copy>(mut f : impl FnMut(A) -> B) -> impl FnMu
         }
 
         res.unwrap()
-    }
+    };
 }
 
 #[cfg(test)]
@@ -21,7 +20,7 @@ mod tests {
     fn test() {
         let foo = |x| {
             println!("Executing for {}", x);
-            x*x
+            x * x
         };
 
         let mut memoized_foo = memo(foo);

@@ -1,10 +1,9 @@
 // https://leetcode.com/problems/coin-change-ii/
 
-
 impl Solution {
     pub fn change(amount: i32, mut coins: Vec<i32>) -> i32 {
         coins.sort_unstable();
-        let mut buffers : Vec<VecDeque<i32>> = Default::default();
+        let mut buffers: Vec<VecDeque<i32>> = Default::default();
 
         for &val in coins.iter() {
             buffers.push(VecDeque::with_capacity(val as usize + 1));
@@ -26,8 +25,8 @@ impl Solution {
     }
 }
 
-use std::collections::VecDeque;
 use super::*;
+use std::collections::VecDeque;
 
 #[cfg(test)]
 mod tests {
@@ -35,7 +34,7 @@ mod tests {
 
     #[test]
     fn test() {
-        assert_eq!(4, Solution::change(5, vec![1,2, 5]));
+        assert_eq!(4, Solution::change(5, vec![1, 2, 5]));
         assert_eq!(0, Solution::change(3, vec![2]));
         assert_eq!(1, Solution::change(10, vec![10]));
     }

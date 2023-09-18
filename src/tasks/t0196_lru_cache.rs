@@ -7,19 +7,19 @@ use std::hash::Hash;
 struct BaseCache<K, V> {
     cache: RefCell<HashMap<K, (V, usize)>>,
     queue: RefCell<VecDeque<K>>,
-    capacity: usize
+    capacity: usize,
 }
 
 impl<K, V> BaseCache<K, V>
-    where K: Eq + Copy + Hash,
-    V: Copy
-
+where
+    K: Eq + Copy + Hash,
+    V: Copy,
 {
     fn new(capacity: usize) -> Self {
         BaseCache {
             cache: Default::default(),
             queue: Default::default(),
-            capacity
+            capacity,
         }
     }
 
@@ -34,9 +34,7 @@ impl<K, V> BaseCache<K, V>
                 Some(*v)
             }
 
-            None => {
-                None
-            }
+            None => None,
         }
     }
 
@@ -56,7 +54,7 @@ impl<K, V> BaseCache<K, V>
         while self.cache.borrow().len() > self.capacity {
             let k = self.queue.borrow_mut().pop_front().unwrap();
             let (_, cnt) = self.cache.get_mut().get_mut(&k).unwrap();
-             *cnt -= 1;
+            *cnt -= 1;
             if *cnt == 0 {
                 self.cache.get_mut().remove(&k);
             }
@@ -64,17 +62,14 @@ impl<K, V> BaseCache<K, V>
     }
 }
 
-
-
 struct LRUCache {
-    cache: BaseCache<i32, i32>
+    cache: BaseCache<i32, i32>,
 }
-
 
 impl LRUCache {
     fn new(capacity: i32) -> Self {
         LRUCache {
-            cache: BaseCache::new(capacity as usize)
+            cache: BaseCache::new(capacity as usize),
         }
     }
 
@@ -86,7 +81,6 @@ impl LRUCache {
         self.cache.put(key, value)
     }
 }
-
 
 #[cfg(test)]
 mod tests {

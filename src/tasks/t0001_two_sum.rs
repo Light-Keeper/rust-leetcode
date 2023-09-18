@@ -9,7 +9,7 @@ impl Solution {
 
         for i in 1..(nums.len()) {
             if let Some(pair) = visited.get(&nums[i]) {
-                return vec![*pair as i32, i as i32]
+                return vec![*pair as i32, i as i32];
             }
             visited.insert(target - nums[i], i);
         }
@@ -26,7 +26,7 @@ mod tests {
 
     #[test]
     fn test() {
-        let result = Solution::two_sum(vec![2,7,11,15], 9);
+        let result = Solution::two_sum(vec![2, 7, 11, 15], 9);
         assert_eq!(result, vec![0, 1])
     }
 }

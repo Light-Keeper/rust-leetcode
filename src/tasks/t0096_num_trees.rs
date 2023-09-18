@@ -1,4 +1,3 @@
-
 impl Solution {
     pub fn num_trees(n: i32) -> i32 {
         assert!(1 <= n && n <= 19);
@@ -7,7 +6,7 @@ impl Solution {
 
         for i in 0..=n as usize {
             for j in 0..i {
-                buffer[i] += buffer[j]*buffer[i-j-1]
+                buffer[i] += buffer[j] * buffer[i - j - 1]
             }
         }
 
