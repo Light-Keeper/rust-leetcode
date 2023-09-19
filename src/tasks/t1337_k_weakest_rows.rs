@@ -5,10 +5,11 @@ impl Solution {
         let mut scores : Vec<_> = mat
             .into_iter()
             .enumerate()
-            .map(|(index, row)| { (row.into_iter().reduce(|a, b| a + b).unwrap(), index) })
+            .map(|(index, row)| { (row.into_iter().sum::<i32>(), index) })
             .collect();
 
         scores.sort_unstable();
+
 
         scores
             .into_iter()
