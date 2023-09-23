@@ -18,6 +18,7 @@ mod t1631_minimum_effort_path;
 mod t2526_consecutive_integers;
 mod t1584_min_cost_connect_points;
 mod t287_find_duplicate;
+mod t1048_longest_str_chain;
 
 pub struct Solution;
 
