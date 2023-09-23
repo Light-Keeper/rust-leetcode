@@ -3,7 +3,6 @@
 impl Solution {
     pub fn gray_code(n: i32) -> Vec<i32> {
         (0..(1 << n))
-            .into_iter()
             .map(|i| {
                 (0..n).fold(0, |acc, bit_index| {
                     let loop_len = 1 << (bit_index + 2);

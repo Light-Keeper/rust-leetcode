@@ -19,4 +19,15 @@ mod t2526_consecutive_integers;
 mod t1584_min_cost_connect_points;
 mod t287_find_duplicate;
 
-struct Solution;
+pub struct Solution;
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn dummy() {
+        let _ = Solution{};
+    }
+}
