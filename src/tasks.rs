@@ -22,6 +22,7 @@ mod t1048_longest_str_chain;
 mod t0905_sort_array_by_parity;
 mod t0896_is_monotonic;
 mod t0557_reverse_words;
+mod t2038_winner_of_game;
 
 pub struct Solution;
 
