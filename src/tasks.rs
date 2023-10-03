@@ -25,7 +25,7 @@ mod t0557_reverse_words;
 mod t2038_winner_of_game;
 mod t0101_is_symmetric;
 mod t1512_num_identical_pairs;
-
+mod t0147_insertion_sort_list;
 pub struct Solution;
 
 
