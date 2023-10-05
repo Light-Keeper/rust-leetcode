@@ -28,6 +28,8 @@ mod t1512_num_identical_pairs;
 mod t0147_insertion_sort_list;
 mod t0706_my_hash_map;
 mod t0155_min_stack;
+mod t0229_majority_element;
+
 pub struct Solution;
 
 
