@@ -29,9 +29,9 @@ mod t0147_insertion_sort_list;
 mod t0706_my_hash_map;
 mod t0155_min_stack;
 mod t0229_majority_element;
+mod t0119_paskal_triangle_2;
 
 pub struct Solution;
-
 
 #[cfg(test)]
 mod tests {
