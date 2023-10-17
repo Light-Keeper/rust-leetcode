@@ -29,7 +29,7 @@ mod t1584_min_cost_connect_points;
 mod t1631_minimum_effort_path;
 mod t2038_winner_of_game;
 mod t2526_consecutive_integers;
-mod t287_find_duplicate;
+mod t0287_find_duplicate;
 
 pub struct Solution;
 
