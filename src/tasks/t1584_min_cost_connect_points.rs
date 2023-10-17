@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/min-cost-to-connect-all-points/
 
-
 impl Solution {
     pub fn min_cost_connect_points(points: Vec<Vec<i32>>) -> i32 {
         if points.len() == 1 {
@@ -10,7 +9,7 @@ impl Solution {
         let mut edges = Vec::with_capacity(points.len().pow(2));
 
         for i in 0..points.len() {
-            for j in i+1..points.len() {
+            for j in i + 1..points.len() {
                 let len = (points[i][0] - points[j][0]).abs() + (points[i][1] - points[j][1]).abs();
                 edges.push((len, (i << 16 | j) as u32))
             }
@@ -49,7 +48,7 @@ impl Solution {
             i = islands[i];
         }
 
-        return i
+        return i;
     }
 
     fn optimize_path(islands: &mut Vec<usize>, mut i: usize, target: usize) {
@@ -69,17 +68,18 @@ mod tests {
 
     #[test]
     fn test() {
-        let result = Solution::min_cost_connect_points(
-            vec![vec![0,0],vec![2,2],vec![3,10],vec![5,2],vec![7,0]]
-        );
+        let result = Solution::min_cost_connect_points(vec![
+            vec![0, 0],
+            vec![2, 2],
+            vec![3, 10],
+            vec![5, 2],
+            vec![7, 0],
+        ]);
 
         assert_eq!(result, 20);
 
-        let result = Solution::min_cost_connect_points(
-            vec![vec![3,12],vec![-2,5],vec![-4,1]]
-        );
+        let result = Solution::min_cost_connect_points(vec![vec![3, 12], vec![-2, 5], vec![-4, 1]]);
 
         assert_eq!(result, 18);
-
     }
 }

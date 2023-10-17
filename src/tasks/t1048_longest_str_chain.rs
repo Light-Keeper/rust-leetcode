@@ -8,7 +8,7 @@ impl Solution {
         let mut chains = vec![0; words.len()];
         for i in 0..words.len() {
             chains[i] = 1;
-            for j in 0..i { 
+            for j in 0..i {
                 if chains[j] >= chains[i] && Self::is_predecessor(&words[j], &words[i]) {
                     chains[i] = chains[j] + 1;
                 }
@@ -36,16 +36,31 @@ impl Solution {
     }
 }
 
-
 use super::*;
 
 #[cfg(test)]
 mod tests {
     use super::*;
-    
+
     #[test]
     fn test() {
-        assert_eq!(Solution::longest_str_chain(vec!["a","b","ba","bca","bda","bdca"].into_iter().map(|s| s.to_string()).collect()), 4);
-        assert_eq!(Solution::longest_str_chain(vec!["xbc","pcxbcf","xb","cxbc","pcxbc"].into_iter().map(|s| s.to_string()).collect()), 5);
+        assert_eq!(
+            Solution::longest_str_chain(
+                vec!["a", "b", "ba", "bca", "bda", "bdca"]
+                    .into_iter()
+                    .map(|s| s.to_string())
+                    .collect()
+            ),
+            4
+        );
+        assert_eq!(
+            Solution::longest_str_chain(
+                vec!["xbc", "pcxbcf", "xb", "cxbc", "pcxbc"]
+                    .into_iter()
+                    .map(|s| s.to_string())
+                    .collect()
+            ),
+            5
+        );
     }
 }
