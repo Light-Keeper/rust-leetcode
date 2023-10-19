@@ -33,6 +33,7 @@ mod t0287_find_duplicate;
 mod t1361_validate_binary_tree_nodes;
 mod t0844_backspace_compare;
 mod t0114_flatten_bin_tree;
+mod t0130_surrounded_regions;
 
 pub struct Solution;
 

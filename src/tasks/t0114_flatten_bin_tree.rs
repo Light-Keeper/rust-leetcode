@@ -32,3 +32,12 @@ impl Solution {
     }
 }
 
+#[cfg(test)] 
+mod test {
+    use super::*;
+
+    #[test] 
+    fn test() {
+        Solution::flatten(&mut None)
+    }
+}
