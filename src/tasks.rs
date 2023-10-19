@@ -32,6 +32,8 @@ mod t2526_consecutive_integers;
 mod t0287_find_duplicate;
 mod t1361_validate_binary_tree_nodes;
 mod t0844_backspace_compare;
+mod t0114_flatten_bin_tree;
+
 pub struct Solution;
 
 #[cfg(test)]
