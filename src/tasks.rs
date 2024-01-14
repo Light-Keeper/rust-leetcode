@@ -12,6 +12,7 @@ mod t0098_validate_binary_search_tree;
 mod t0101_is_symmetric;
 mod t0114_flatten_bin_tree;
 mod t0119_paskal_triangle_2;
+mod t0125_is_palindrome;
 mod t0130_surrounded_regions;
 mod t0147_insertion_sort_list;
 mod t0149_max_points_on_line;
