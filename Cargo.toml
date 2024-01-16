@@ -9,3 +9,4 @@ crate-type = ["cdylib"]
 bench = false
 
 [dependencies]
+rand = "0.7.2"
