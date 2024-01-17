@@ -38,7 +38,7 @@ mod t1838_max_frequency;
 mod t2038_winner_of_game;
 mod t2526_consecutive_integers;
 mod t0380_randomized_set;
-
+mod t1207_unique_occurrences;
 pub struct Solution;
 
 #[cfg(test)]
