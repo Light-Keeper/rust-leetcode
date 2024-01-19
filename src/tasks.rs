@@ -39,6 +39,7 @@ mod t2038_winner_of_game;
 mod t2526_consecutive_integers;
 mod t0380_randomized_set;
 mod t1207_unique_occurrences;
+mod t0931_min_falling_path_sum;
 pub struct Solution;
 
 #[cfg(test)]
